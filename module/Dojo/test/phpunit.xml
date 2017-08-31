@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="./bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="DojoTest">
+            <directory>./DojoTest</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory>../../../module/Dojo/src/V1/Rest/Pizza</directory>
+            <exclude>
+                <file>../../../module/Dojo/src/V1/Rest/Pizza/PizzaCollection.php</file>
+                <file>../../../module/Dojo/src/V1/Rest/Pizza/PizzaEntity.php</file>
+                <file>../../../module/Dojo/src/V1/Rest/Pizza/PizzaResource.php</file>
+                <file>../../../module/Dojo/src/V1/Rest/Pizza/PizzaResourceFactory.php</file>
+                <file>../../../module/Dojo/src/V1/Rest/Pizza/PizzaServiceFactory.php</file>
+
+                <file>../../../module/Dojo/src/V1/Rest/Member/MemberCollection.php</file>
+                <file>../../../module/Dojo/src/V1/Rest/Member/MemberEntity.php</file>
+                <file>../../../module/Dojo/src/V1/Rest/Member/MemberResource.php</file>
+                <file>../../../module/Dojo/src/V1/Rest/Member/MemberResourceFactory.php</file>
+                <file>../../../module/Dojo/src/V1/Rest/Member/MemberServiceFactory.php</file>
+
+                <file>../../../module/Dojo/src/V1/Rest/PizzaRate/PizzaRateCollection.php</file>
+                <file>../../../module/Dojo/src/V1/Rest/PizzaRate/PizzaRateEntity.php</file>
+                <file>../../../module/Dojo/src/V1/Rest/PizzaRate/PizzaRateResource.php</file>
+                <file>../../../module/Dojo/src/V1/Rest/PizzaRate/PizzaRateResourceFactory.php</file>
+                <file>../../../module/Dojo/src/V1/Rest/PizzaRate/PizzaRateServiceFactory.php</file>
+
+                <file>../../../module/Dojo/Module.php</file>
+            </exclude>
+        </whitelist>
+        <blacklist>
+            <directory>../../../vendor</directory>
+            <directory>../../../module</directory>
+            <directory>../../../module/Dojo/test</directory>
+            <directory>/tmp/</directory>
+        </blacklist>
+    </filter>
+
+    <logging>
+        <log type="coverage-html" target="./log/codeCoverage" charset="UTF-8"
+             yui="true" highlight="true"
+             lowUpperBound="50" highLowerBound="80"/>
+        <log type="testdox-html" target="./log/testdox.html" />
+    </logging>
+
+</phpunit>
