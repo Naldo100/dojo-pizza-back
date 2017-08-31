@@ -12,8 +12,8 @@ Dojo para solução do problema de pizza (backend)
  
 # Instalação
 
- * É necessário que tenha php7 + composer + apache2 + postgresql >= 9.5 instalados
-  
+  É necessário que tenha php7 + composer + apache2 + postgresql >= 9.5 instalados, altere as configurações do banco na pasta config/autoload/global.php
+
  - git clone https://github.com/felipewebdf/dojo-pizza-back
  - cd dojo-pizza-back
  - composer install
